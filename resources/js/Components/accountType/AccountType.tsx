@@ -82,41 +82,69 @@ export const AccountType = () => {
     return (
         <>
             <section className="bg-[#f8fafb]">
-                <div className="max-w-screen-xl xl:px-16 2xl:px-0 mx-auto text-center py-10">
-                    <div className="flex items-center gap-2 mb-3 w-fit mx-auto rounded-full">
-                        <div className="bg-primary w-2 h-2 rounded-full"></div>
+                <div className="max-w-screen-xl py-10 mx-auto text-center xl:px-16 2xl:px-0">
+                    <div className="flex items-center gap-2 mx-auto mb-3 rounded-full w-fit">
+                        <div className="w-2 h-2 rounded-full bg-primary"></div>
                         <span className="text-primary">Account Types</span>
                     </div>
-                    <h2 className="text-5xl font-semibold mb-5">
+                    <h2 className="mb-5 text-5xl font-semibold">
                         Maximize your benefits with <br /> the right account
                     </h2>
                     <p className="text-gray-600 w-[60%] mx-auto">
-                        Open your account today and tailor your experience to fit your goals. It's easy to start - customize your settings and dive into EMA Markets
+                        Open your account today and tailor your experience to
+                        fit your goals. It's easy to start - customize your
+                        settings and dive into EMA Markets
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 mt-10 px-5">
+                    <div className="grid grid-cols-1 gap-3 px-5 mt-10 md:grid-cols-3 lg:grid-cols-5">
                         {accountTypes.map((account, idx) => (
                             <div
                                 key={idx}
-                                className={`rounded-md p-5 ${account.isHighlighted
+                                className={`rounded-md p-5 ${
+                                    account.isHighlighted
                                         ? "bg-[#0c60c4] text-white"
                                         : "bg-white text-black"
-                                    }`}
+                                }`}
                             >
-                                <p className={`${account.isHighlighted ? "bg-white text-blue-600" : "bg-blue-500 text-white"} rounded-full w-fit text-xs px-2 mb-3`}>
+                                <p
+                                    className={`${
+                                        account.isHighlighted
+                                            ? "text-white-800 text-lg font-semibold"
+                                            : "text-blue-500 text-lg font-semibold"
+                                    } rounded-full w-fit mb-3`}
+                                >
                                     {account.label}
                                 </p>
-                                <h4 className={`text-2xl mb-5 ${account.isHighlighted ? "capitalize" : ""}`}>{account.title}</h4>
-                                <hr className={account.isHighlighted ? "border-white" : "border-gray-300"} />
-                                <ul className="space-y-4 mt-3 text-sm font-extralight">
+                                <h4
+                                    className={`text-2xl mb-2 text-left ${
+                                        account.isHighlighted
+                                            ? "capitalize"
+                                            : ""
+                                    }`}
+                                >
+                                    {account.title}
+                                </h4>
+                                <hr
+                                    className={
+                                        account.isHighlighted
+                                            ? "border-white"
+                                            : "border-gray-300"
+                                    }
+                                />
+                                <ul className="mt-3 space-y-4 text-sm font-extralight">
                                     {account.features.map((feature, index) => (
-                                        <li key={index} className="flex items-center gap-2 text-start">
+                                        <li
+                                            key={index}
+                                            className="flex items-center gap-2 text-start"
+                                        >
                                             <img
-                                                src="https://res.cloudinary.com/dnsekavtx/image/upload/v1730561261/Icon_lgl26w.svg"
+                                                src={
+                                                    account.isHighlighted
+                                                        ? "https://res.cloudinary.com/dnsekavtx/image/upload/v1730561263/Icon-1_lwgodi.svg"
+                                                        : "https://res.cloudinary.com/dnsekavtx/image/upload/v1730561261/Icon_lgl26w.svg"
+                                                }
                                                 alt=""
-                                                className={`${account.isHighlighted ? "filter invert" : ""
-                                                    }`}
+                                                className="w-4 h-4"
                                             />
-
                                             {feature}
                                         </li>
                                     ))}
@@ -124,8 +152,8 @@ export const AccountType = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="w-full flex justify-center mt-10">
-                        <Button className="rounded-full text-white px-8 py-6 transition">
+                    <div className="flex justify-center w-full mt-10">
+                        <Button className="px-8 py-6 text-white transition rounded-full">
                             Open an Account
                         </Button>
                     </div>
