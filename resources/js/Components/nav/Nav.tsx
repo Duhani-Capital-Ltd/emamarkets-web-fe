@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Navigation } from "./navigation/Navigation"
 import { DropdownCountry } from "./navigation/DropdowonCountry"
+import { Login } from "../auth/Login"
+import Register from "../auth/Register"
 
 export const Navbar = () => {
     return (
@@ -12,8 +14,8 @@ export const Navbar = () => {
                     <div className="border-r pr-4 mr-2">
                         <DropdownCountry />
                     </div>
-                    <Button className="rounded-full" variant={'outline'}>Login</Button>
-                    <Button className="rounded-full">Register</Button>
+                    <Login/>
+                    <Register/>
                 </div>
             </nav>
         </>
