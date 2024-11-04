@@ -8,7 +8,7 @@ export const Hero = () => {
                 <div className="grid items-center max-w-screen-xl grid-cols-2 mx-auto xl:px-16 2xl:px-0">
                     <div className="">
                         <span className="bg-[#eceff3] flex w-fit rounded-full py-2 px-3">
-                            🎉 Announcing our $14M Fundarise{" "}
+                            🎉 Announcing our $14M Fundraise{" "}
                             <svg
                                 className="w-6 h-6 text-gray-800 dark:text-white"
                                 aria-hidden="true"
@@ -28,7 +28,7 @@ export const Hero = () => {
                             </svg>
                         </span>
                         <h1 className="my-6 text-6xl font-bold">
-                            Empower Your Trade Seamless and Secure Experince
+                            Empower Your Trade: Seamless and Secure Experience.
                         </h1>
                         <p className="w-[75%] text-lg">
                             Trade with confidence using our advanced platform,
